@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Студенты ШРИ 2016</title>
+        <script type="text/javascript">
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/worker.js', {scope: './'})
+                    .catch(console.log);
+            }
+        </script>
+		<link rel="stylesheet" href="/css/index.css">
+	</head>
+	<body>
+		<h1 class="page-header">Студенты ШРИ 2016</h1>
+        <div class="students">
+            <div class="students__list"></div>
+            <form class="students__add-form student-form">
+                <label class="student-form__field student-form__field-name">
+                    <span class="student-form__field-label">Имя</span><input type="text" name="name">
+                </label>
+                <label class="student-form__field student-form__field-picture">
+                    <span class="student-form__field-label">URL фотографии</span><input type="text" name="picture">
+                </label>
+                <label class="student-form__field student-form__field-bio">
+                    <span class="student-form__field-label">Кратко о себе</span><textarea name="bio" rows="5" cols="40"></textarea>
+                </label>
+                <button class="students__add-btn">Добавить</button>
+            </form>
+        </div>
+
+		<script type="text/javascript" src="/js/index.js"></script>
+        <script type="text/javascript" src="/js/sync.js"></script>
+	</body>
+</html>

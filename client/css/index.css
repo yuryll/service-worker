@@ -1,0 +1,89 @@
+body {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16pt;
+    margin: 2em;
+}
+
+.page-header {
+    font-size: 250%;
+	font-weight: 100;
+    margin: 0 0 1em;
+}
+
+.students__list {
+    margin: 0 0 2em 0;
+}
+
+.student {
+    position: relative;
+    display: flex;
+    margin: 0 0 2em 0;
+}
+
+.student__picture {
+    margin: 0 1em 1em 0;
+}
+
+.student__name {
+    margin: 0 0 0.25em 0;
+}
+
+.student__bio {
+    width: 80%;
+    margin: 0;
+}
+
+.student-form__field {
+    display: block;
+    margin: 0 0 1em;
+}
+
+.student-form__field_error input,
+.student-form__field_error textarea {
+    background-color: red;
+    color: white;
+}
+
+.student-form__field input,
+.student-form__field textarea,
+.student-form button {
+    font-size: 100%;
+    padding: .4em;
+}
+
+.student-form button {
+    margin: 0 0 1em 10em;
+}
+
+.student-form__field input {
+    width: 19em;
+}
+
+.student-form__field-label {
+    display: inline-block;
+    width: 10em;
+    vertical-align: top;
+}
+
+@keyframes loading {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+.status-indicator {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: red;
+    width: 80px;
+    height: 80px;
+}
+
+.student[data-loaded=true] .status-indicator {
+    background: url('/pix/done.png') round;
+}
+
+.student[data-loaded=false] .status-indicator {
+    background: url('/pix/loading.png') round;
+    animation: loading 1s linear 0.15s infinite;
+}

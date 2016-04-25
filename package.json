@@ -1,0 +1,23 @@
+{
+  "name": "task3",
+  "version": "1.0.0",
+  "description": "Task 3 for SHRI-2016 Moscow",
+  "private": true,
+  "main": "server",
+  "engines": {
+    "node": ">=5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://example.com"
+  },
+  "scripts": {
+    "start": "node ./"
+  },
+  "author": "Maxim Vasilyev",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "lodash": "^4.6.1"
+  }
+}
